@@ -23,11 +23,4 @@ ENV/
 experiments/*
 !experiments/.gitkeep
 
-# Model / media artifacts (mostly inside experiments anyway)
-*.pth
-*.pt
-*.mp4
-*.gif
-*.png
-*.csv
-*.jsonl
+
