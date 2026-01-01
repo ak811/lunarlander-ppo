@@ -1,30 +1,14 @@
 # LunarLander PPO
 
-This repository implements Proximal Policy Optimization (PPO) for `LunarLander-v3` using Gymnasium + PyTorch.
+This repository implements Proximal Policy Optimization (PPO) using an **Actor-Critic** network to solve **`LunarLander-v3`** with Gymnasium + PyTorch.
+It trains from scratch, logs metrics, saves checkpoints, generates plots, and can record rollout videos.
 
 - Training entry: `python scripts/train.py --config configs/default.yaml`
 - Evaluation: `python scripts/evaluate.py --config configs/default.yaml --checkpoint <path>`
 - Video: `python scripts/record_video.py --config configs/default.yaml --checkpoint <path>`
 - Sweep: `python scripts/sweep.py --sweep configs/sweep.yaml`
 
-A practical implementation of **Proximal Policy Optimization (PPO)** using an **Actor-Critic** network to solve **`LunarLander-v3`**.  
-It trains from scratch, logs metrics, saves checkpoints, generates plots, and can record rollout videos.
-
----
-
-## Project Structure
-
-```text
-lunarlander-ppo/
-├─ configs/            # YAML configs (default/best/sweep)
-├─ src/                # package source (agent/env/training/logging/utils)
-├─ scripts/            # CLI entrypoints (train/evaluate/sweep/record_video)
-├─ experiments/        # run outputs (models/plots/logs) - not committed
-├─ assets/
-│  ├─ figures/         # README images
-│  └─ videos/          # README videos
-└─ tests/              # basic correctness + smoke tests
-```
+![Lunar Lander](https://gymnasium.farama.org/_images/lunar_lander.gif)
 
 ---
 
@@ -33,8 +17,6 @@ lunarlander-ppo/
 ```bash
 pip install -r requirements.txt
 ```
-
-> Note: `gymnasium[box2d]` pulls Box2D dependencies. If your machine complains, it’s usually missing system build tools.
 
 ---
 
@@ -155,10 +137,9 @@ This configuration is the selected “best” setup used for the longer training
 
 **Policy rollout video** (best model):
 
-https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/raw/main/assets/videos/video.mp4
-
-> GitHub README rendering does not reliably embed MP4 as an inline player everywhere. The link above is the simplest “it works” option.
-> If you want inline playback, convert it to a GIF and embed it, or use GitHub Pages.
+<video src="https://github.com/user-attachments/assets/ae39b2a6-dd16-453c-803f-f61985d0384e" controls width="600">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
@@ -172,4 +153,4 @@ pytest -q
 
 ## License
 
-MIT.
+MIT (See `LICENSE`).
