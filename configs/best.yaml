@@ -1,0 +1,26 @@
+project_name: "lunarlander-ppo"
+env_name: "LunarLander-v3"
+
+seed: 42
+device: "auto"
+
+max_episodes: 10000
+max_timesteps: 1000
+eval_every: 50
+eval_episodes: 20
+save_video_every_best: true
+
+learning_rate: 3.0e-4
+gamma: 0.99
+gae_lambda: 0.95
+clip_epsilon: 0.2
+update_epochs: 4
+mini_batch_size: 64
+entropy_coef: 0.005
+value_loss_coef: 0.5
+max_grad_norm: 0.5
+
+hidden_dim: 128
+
+experiments_dir: "experiments"
+run_name: "best_run"
