@@ -1,0 +1,15 @@
+# Simple grid sweep runner reads this and iterates configs.
+
+base_config: "configs/default.yaml"
+
+grid:
+  entropy_coef: [0.005, 0.01, 0.02]
+  clip_epsilon: [0.1, 0.2, 0.3]
+  update_epochs: [4, 6, 8]
+  learning_rate: [3.0e-4, 5.0e-4, 1.0e-3]
+
+# Each sweep run will override:
+overrides:
+  max_episodes: 1000
+  eval_every: 100
+  eval_episodes: 10
