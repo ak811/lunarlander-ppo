@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual envs
+.venv/
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Experiments / outputs
+experiments/*
+!experiments/.gitkeep
+
+# Model / media artifacts (mostly inside experiments anyway)
+*.pth
+*.pt
+*.mp4
+*.gif
+*.png
+*.csv
+*.jsonl
